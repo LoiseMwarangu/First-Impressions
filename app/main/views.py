@@ -68,8 +68,6 @@ def new_blog():
         print(subscribers)
         for subscriber in subscribers:
             print(subscriber.email)
-            # mail_message("New Blog Alert!!", "email/new_blog", subscriber.email)
-        #     mail_message("New Blog Notice!!","email/new_blog",subscriber.email, subscriber=subscriber)
         return redirect(url_for('main.index'))
     return render_template('new_blog.html',blog_form = form)
     
