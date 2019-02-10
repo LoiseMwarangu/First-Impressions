@@ -1,7 +1,7 @@
 import unittest
 from app import create_app,db
 from flask_script import Manager,Server
-from app.models import User,Role,Blog,Comment,Category,Subscribe
+from app.models import User,Role,Blog,Comment,Category,Subscribe,Review
 from  flask_migrate import Migrate, MigrateCommand
 
 # Creating app instance
