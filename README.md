@@ -1,4 +1,4 @@
- First Impressions
+# First Impression
 #### This is a website that allows users to post pitches, vote on them and comment on them..This application was created on 11th february 2019
 #### By **Loise Mwarangu**
 ## Description
