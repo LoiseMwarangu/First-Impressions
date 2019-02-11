@@ -1,10 +1,9 @@
- Pitch App
-#### This is a website that allows users to post pitches, vote on them and comment on them..This application was created on 11th february 2018
+ First Impressions
+#### This is a website that allows users to post pitches, vote on them and comment on them..This application was created on 11th february 2019
 #### By **Loise Mwarangu**
 ## Description
 This is a website that allows app's users to post pitches in various categories, comment on others posted and vote on them
 ## Behavior Driven Development
-* The program should display various categories:
 
      **Input Example**: On page load
 
@@ -37,7 +36,7 @@ This is a website that allows app's users to post pitches in various categories,
 ## Setup/Installation Requirements
 To start using this project use the following commands:
 
-* `git clone https://github.com/LoiseMwarangu/pitches-app.git`
+* `git clone https://github.com/LoiseMwarangu/First-Impressions.git`
 * `cd Pitch`
 * `atom .`
 * `code . `(this is if Visual Studio Code is your preferred text editor)
@@ -70,7 +69,7 @@ For any comments,suggestions,feedback or inquiries about my application,Contact 
 ## License
 MIT License
 
-Copyright (c) 2018 LoiseMwarangu
+Copyright (c) 2019 LoiseMwarangu
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sub-license, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
