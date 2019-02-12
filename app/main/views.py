@@ -5,6 +5,7 @@ from ..models import User,Blog,Comment,Category,Subscribe
 from .forms import UpdateProfile,BlogForm,CommentForm,SubscribeForm
 from .. import db,photos
 from ..email import mail_message
+import markdown2
 
 @main.route('/')
 def index():
@@ -26,7 +27,13 @@ def profile(uname):
     title = "Profile Page"
 
     return render_template("profile/profile.html",title = title,user = user)
-
+@main.route('/review/<int:id>')
+def single_review(id):
+    review=Review.query.get(id)
+    if review is None:
+        abort(404)
+    format_review = markdown2.markdown(review.movie_review,extras=["code-friendly", "fenced-code-blocks"])
+    return render_template('review.html',review = review,format_review=format_review)
 @main.route('/user/<uname>/update',methods = ['GET','POST'])
 @login_required
 def update_profile(uname):
