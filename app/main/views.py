@@ -13,7 +13,7 @@ def index():
     View root page function that returns the index page and its data
     '''
     
-    title = 'Home of Awesome Blogs'
+    title = 'Create a first impression'
 
     return render_template('index.html',title=title)
 
