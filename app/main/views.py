@@ -101,7 +101,7 @@ def new_comment(id):
 
     title='Comment Section'
 
-    return render_template('new_comment.html',title = title,comment_form = form)
+    return render_template('new_review.html',title = title,comment_form = form)
 
 @main.route('/subscribe',methods=["GET","POST"])
 def subscribe():
