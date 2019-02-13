@@ -43,8 +43,9 @@ class Role(db.Model):
 
     id = db.Column(db.Integer,primary_key = True)
     name = db.Column(db.String(255))
-    # users = db.relationship('User',backref = 'role',lazy="dynamic")
-
+    users = db.relationship('User',backref = 'role',lazy="dynamic")
+    def __repr__(self):
+        return f'User {self.name}'
 
 class Blog(db.Model):
     blog_list=[]
@@ -55,7 +56,7 @@ class Blog(db.Model):
     title = db.Column(db.String(255),index = True)
     posted = db.Column(db.DateTime,default=datetime.utcnow)
     user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
-    # category_id = db.Column(db.Integer,db.ForeignKey('categories.id'))
+    category_id = db.Column(db.Integer,db.ForeignKey('categories.id'))
     comments = db.relationship('Comment', backref = 'blog', lazy = 'dynamic')
 
     def __init__(self,title,post,user):

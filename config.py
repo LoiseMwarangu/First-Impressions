@@ -2,7 +2,7 @@ import os
 
 class Config:
     SECRET_KEY = 'loise'
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://loise:21528007@localhost/pitch'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://loise:32123772@localhost/pitch'
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
@@ -15,13 +15,13 @@ class Config:
     SIMPLEMDE_JS_IIFE = True
     SIMPLEMDE_USE_CDN = True
 class ProdConfig(Config):
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABSE_URL")
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://loise:32123772@localhost/pitch'
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://loise:21528007@localhost/pitch_test'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://loise:32123772@localhost/pitch_test'
 
 class DevConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://loise:21528007@localhost/pitch'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://loise:32123772@localhost/pitch'
     DEBUG = True
 
 config_options = {
@@ -29,3 +29,4 @@ config_options = {
 'production':ProdConfig,
 'test':TestConfig
 }
+

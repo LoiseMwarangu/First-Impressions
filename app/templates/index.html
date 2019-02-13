@@ -3,7 +3,7 @@
 {% block content %}
 
 <body>
-    <div class="container color">
+    <div class="container">
         <br>
         <br>
         <br>
@@ -21,7 +21,7 @@
                 <br>
             </div>
             <div class="thumbnail blogs">
-                <h3><b>About life</b></h3>
+                <h3><b>Pitches About life</b></h3>
                 <br>
                 <p>"Life is 10% what happens to you and 90% how you react to it"
 
@@ -44,17 +44,12 @@
         </div>
         <div class="row col-sm-1 col-xs-1 col-md-1 col-lg-1"></div>
         <div class="row col-sm-2 col-xs-2 col-md-3 col-lg-3" style="border-left: 3px black">
-            <!-- <div class="button btn btn-success">
-                        <a href="/subscribe" class="subscribe">Subscribe Here:</a>
-                    </div> -->
             <br>
             <br>
-            <!-- <div class="col-md-6"> -->
             <div class="thumbnail">
                 <h2 class="view">View Posted Pitches:</h2>
                 {{macro.displayBlog(blogs)}}
-                <!-- <div class="col-md-3"> -->
-                    <!-- <div class="container"> -->
+
                         <form button="submitQuote()" #blogForm=''>
                       <div class="form-group">
                         <label for="name"> Your Pitch :</label>
@@ -70,8 +65,4 @@
         </div>
     </div>
 </body>
-
-
-
-
 {% endblock %}
