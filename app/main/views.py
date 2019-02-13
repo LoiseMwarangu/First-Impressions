@@ -12,7 +12,6 @@ def index():
     '''
     View root page function that returns the index page and its data
     '''
-    
     title = 'Create a first impression'
 
     return render_template('index.html',title=title)
@@ -27,13 +26,7 @@ def profile(uname):
     title = "Profile Page"
 
     return render_template("profile/profile.html",title = title,user = user)
-@main.route('/review/<int:id>')
-def single_review(id):
-    review=Review.query.get(id)
-    if review is None:
-        abort(404)
-    format_review = markdown2.markdown(review.movie_review,extras=["code-friendly", "fenced-code-blocks"])
-    return render_template('review.html',review = review,format_review=format_review)
+
 @main.route('/user/<uname>/update',methods = ['GET','POST'])
 @login_required
 def update_profile(uname):
@@ -76,7 +69,7 @@ def new_blog():
         for subscriber in subscribers:
             print(subscriber.email)
         return redirect(url_for('main.index'))
-    return render_template('new_blog.html',blog_form = form)
+    return render_template('new_pitch.html',blog_form = form)
     
 @main.route('/blog/<int:id>')
 def see_blogs(id):

@@ -11,7 +11,7 @@ def test_check_instance_variables(self):
         self.assertEquals(self.new_review.pitch_id,12345)
         self.assertEquals(self.new_review.pitch_title,'Review for pitchs')
         self.assertEquals(self.new_review.image_path,"https://image.tmdb.org/t/p/w500/jdjdjdjn")
-        self.assertEquals(self.new_review.pitch_review,'This pitch is the best thing since sliced bread')
+        self.assertEquals(self.new_review.pitch_review,'once bitten twice shy')
         self.assertEquals(self.new_review.user,self.user_James)
 def test_save_review(self):
         self.new_review.save_review()

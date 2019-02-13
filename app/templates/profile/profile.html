@@ -11,7 +11,6 @@
                     <div class="col-md-4">
                         <h3 class="user">{{user.username | capitalize}}</h3>
                         {% if user.profile_pic_path %}
-                        <img src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail">
                         {%else%}
                         <p class="no">No profile picture</p>
                         {% endif %}
