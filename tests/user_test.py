@@ -1,5 +1,5 @@
 import unittest
-from app.models import User
+from .app.models import User
 from app import db
 
 class UserModelTest(unittest.TestCase):
@@ -7,7 +7,7 @@ class UserModelTest(unittest.TestCase):
         '''
         set up will run before every test
         '''
-        self.new_user = User(id = 1, username = "Loise", email = "kanogae@gmail.com", password_hash = "hashed_password")
+        self.new_user = User(id = 1, username = "Loise", email = "loisemwarangu@gmail.com", password_hash = "hashed_password")
 
     def test_instance(self):
         '''
@@ -20,3 +20,9 @@ class UserModelTest(unittest.TestCase):
         test to check if password is being hashed
         '''
         self.assertTrue(self.new_user.password_hash is not None)
+        def test_no_access_password(self):
+            with self.assertRaises(AttributeError):
+                self.new_user.password
+
+        def test_password_verification(self):
+            self.assertTrue(self.new_user.verify_password('banana'))
