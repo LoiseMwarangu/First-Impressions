@@ -10,9 +10,6 @@
   <br>
   <div class="well">
       <div class="row">
-
-          <div class="col-md-2"> </div>
-      
           <div class="col-md-8">
             <!-- Flash message -->
             {% for message in get_flashed_messages() %}
@@ -25,12 +22,12 @@
       
             {{ wtf.quick_form(login_form) }}
             <br>
-             <p class="dont"> New to impressions? <a href="{{url_for('auth.register')}}">Sign up here</a></p> -->
+             <p class="dont"> New to impressions? <a href="{{url_for('auth.register')}}">Sign up here</a></p> 
       
       
           </div>
       
-          <div class="col-md-2"> </div>
+          
       
         </div>
   </div>

@@ -1,8 +1,8 @@
 from flask import render_template,request,redirect,url_for,abort,flash
 from . import main
 from flask_login import login_required,current_user
-from ..models import User,Blog,Comment,Category,Subscribe
-from .forms import UpdateProfile,BlogForm,CommentForm,SubscribeForm
+from ..models import User,Blog,Comment,Category
+from .forms import UpdateProfile,BlogForm,CommentForm
 from .. import db,photos
 from ..email import mail_message
 import markdown2
@@ -54,22 +54,6 @@ def update_pic(uname):
         user.profile_pic_path = path
         db.session.commit()
     return redirect(url_for('main.profile',uname=uname))
-
-@main.route('/blog/new',methods=['GET','POST'])
-@login_required
-def new_blog():
-    form = BlogForm()
-    if form.validate_on_submit():
-        title=form.title.data
-        post=form.post.data
-        new_blog=Blog(title=title,post=post,user=current_user)
-        new_blog.save_blog()
-        subscribers= Subscribe.query.all()
-        print(subscribers)
-        for subscriber in subscribers:
-            print(subscriber.email)
-        return redirect(url_for('main.index'))
-    return render_template('new_pitch.html',blog_form = form)
     
 @main.route('/blog/<int:id>')
 def see_blogs(id):

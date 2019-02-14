@@ -13,14 +13,26 @@ class User(UserMixin,db.Model):
     __tablename__ = 'users'
 
     id = db.Column(db.Integer,primary_key = True)
-    username = db.Column(db.String(255),index = True)
+    username = db.Column(db.String(255),index = True, nullable=False)
     name = db.Column(db.String(255),index = True)
-    email = db.Column(db.String(255),unique = True,index = True)
+    email = db.Column(db.String(255),unique = True,index = True, nullable=False)
+    role_id = db.Column(db.Integer,db.ForeignKey('roles.id'))
     password_hash = db.Column(db.String(255))
     bio = db.Column(db.String(255))
     profile_pic_path = db.Column(db.String())
     the_blog = db.relationship('Blog', backref='user', lazy='dynamic')
 
+    def __init__(username,name,email,password_hash):
+        self.username = username
+        self.name = name
+        self.email = email      
+
+    def save_User(self):
+        '''
+        Function that saves all users posted
+        '''
+        db.session.add(self)
+        db.session.commit()
     # comment = db.relationship('Comment', backref = 'user', lazy = 'dynamic')
 
     @property
@@ -58,7 +70,7 @@ class Blog(db.Model):
     user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
     category_id = db.Column(db.Integer,db.ForeignKey('categories.id'))
     comments = db.relationship('Comment', backref = 'blog', lazy = 'dynamic')
-
+    role_id = db.Column(db.Integer,db.ForeignKey('roles.id'))
     def __init__(self,title,post,user):
         self.user = user
         self.title = title
@@ -133,13 +145,6 @@ class Comment(db.Model):
     @classmethod
     def delete_all_blogs(cls):
         Blog.all_blogs.delete()
-
-
-class Subscribe(db.Model):
-    __tablename__='subscribe'
-    id=db.Column(db.Integer,primary_key=True)
-    name=db.Column(db.String(255))
-    email=db.Column(db.String(255),unique = True,index = True, nullable=False)
 
     def __repr__(self):
         return f'{self.email}'

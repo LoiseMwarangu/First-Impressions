@@ -1,4 +1,4 @@
-<div class="navbar navbar-inverse" role="navigation" style="background-color:rgb(16, 16, 17); border:rgb(14, 13, 13);">
+<div class="navbar navbar-inverse" role="navigation" ;>
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -15,23 +15,25 @@
         <a href="/blog/new" class="btn btn-md buttons">Add New Blog   &nbsp;<span class="glyphicon glyphicon-plus"></span></a>
         &nbsp;
         {% endif %}
-        <a href="/subscribe\" class="btn btn-md buttons">Subscribe  &nbsp;<span class="glyphicon glyphicon-envelope"></span></a>
-      </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
           {% if current_user.is_authenticated %}
-          <li><a href="{{url_for('main.profile',uname=current_user.username)}}" class="profile" style="color:black; font-weight:bolder;">Profile</a></li>
-          <li><a href="{{url_for('main.profile',uname=current_user.username)}}" class="user"style="color:whitesmoke; font-weight:bolder;"><span class="glyphicon glyphicon-user"></span> &nbsp;{{current_user.username}}</a></li>
+          <li><a href="{{url_for('main.profile',uname=current_user.username)}}" class="profile" >Profile</a></li>
+          <li><a href="{{url_for('main.profile',uname=current_user.username)}}" class="user"style="color:white; font-weight:bolder;"><span class="glyphicon glyphicon-user"></span> &nbsp;{{current_user.username}}</a></li>
           <li><a href="{{url_for('auth.logout')}}" class="logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Log out</a></li>
           {% else %}
           <li><a href="{{url_for('auth.login')}}" class="login"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Log in</a></li>
           {% endif %}
         </ul>
-      </div>
-      
+      </div> 
     </div>
   </div>
+  
   <style>
-    @import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+  .navbar navbar-inverse::after{
+    background-image: url("navbar navbar-inverse");
+  }
+  </style>
+    
 
   
