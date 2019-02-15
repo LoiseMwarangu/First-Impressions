@@ -4,38 +4,35 @@
 
 <body>
  {{macro.displayBlog(blogs)}}
-
    <div class="container">
        <h1>IMPRESS ME</h1>
            <h2 class="head">PITCH CATEGORIES</h2>
-
        <br>
        <br>
        <div class="thumbnail blogs">
-           <h3><b>Sarcastic pitches</b></h3>
-           <br>
+          <h3><b>Sarcastic pitches</b></h3>
+          <br>
 
            <br>
        </div>
        <div class="thumbnail blogs">
-
-           <h3><b>Pitches About life</b></h3>
-           <br>
-           <br>
+          <h3><b>Pitches About life</b></h3>
+          <br>
+          <br>
        </div>
        <div class="thumbnail blogs">
-           <h3><b>Motivational pitches</b></h3>
-           <br>
-           <br>
+          <h3><b>Motivational pitches</b></h3>
+          <br>
+          <br>
        </div>
        <div class="thumbnail blogs">
-           <h3><b>Other Categories</b></h3>
-           <br>
-           <br>
+         <h3><b>Other Categories</b></h3>
+          <br>
+          <br>
            </div>
        </div>
-   </div>
-    <style>
+
+<style>
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 body{
@@ -45,17 +42,23 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    
 
 }
-
+h1{
+    float: right;
+    color: white;
+}
+h2{
+    text-align: center;
+}
 .head {
-    color: black;
+    color: gray;
     font-family: 'Nunito', sans-serif !important;
     font-size: 40px;
     text-align: center;
 
 }
-
 .subscribe {
     font-family: 'Nunito', sans-serif !important;
 }
@@ -76,15 +79,10 @@ body{
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     transform: translateY(-7px);
 }
-
 p {
     font-size: 15px;
 }
 
-h3 {
-    text-decoration-line: underline;
-    
-}
 
 .view {
     text-decoration-line: underline;
@@ -94,17 +92,11 @@ h3 {
 .thumbnail blogs {
     text-align: center;
     font-size: 20px;
-    opacity: 0.7;
+    opacity: 0.9;
     filter: alpha(opacity=50);
     color:  white; 
-}
-
-.color {
-    color: black !important;
-    font-family: 'Nunito', sans-serif !important;
 
 }
-</style>
-                    
+</style>                
 </body>
 {% endblock %}

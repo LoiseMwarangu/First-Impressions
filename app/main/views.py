@@ -65,7 +65,7 @@ def see_blogs(id):
 
 
     title = 'Home of Awesome Blogs'
-    return render_template('blog.html',comments = comments,title = title,blog = blog,blog_form = form,user = user)
+    return render_template('pitch.html',comments = comments,title = title,blog = blog,blog_form = form,user = user)
 
 @main.route('/comment/new/<int:id>',methods=['GET','POST'])
 def new_comment(id):

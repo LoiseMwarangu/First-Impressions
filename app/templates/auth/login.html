@@ -1,37 +1,32 @@
 {% extends 'base.html' %}
 {% import 'bootstrap/wtf.html' as wtf%}
-
 {% block content%}
-
-<div class="container logiin">
-  <br>
-  <br>
-  <br>
-  <br>
-  <div class="well">
-      <div class="row">
-          <div class="col-md-8">
+<body>
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="well">
             <!-- Flash message -->
             {% for message in get_flashed_messages() %}
                 <div class="alert alert-danger">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                 {{ message }}
-                </div>
-      
             {% endfor %}
-      
+            
             {{ wtf.quick_form(login_form) }}
             <br>
              <p class="dont"> New to impressions? <a href="{{url_for('auth.register')}}">Sign up here</a></p> 
-      
-      
-          </div>
-      
-          
-      
+              </div>
         </div>
-  </div>
-</div>
-
-
+    </div>
+</body>
+<style>
+  body{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5soKjny61SPkobrhI7T3U5P8FUIzw-_XhqDcR--EVTz62nam-");
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+</style>
 {%endblock%}
