@@ -14,7 +14,6 @@ class User(UserMixin,db.Model):
 
     id = db.Column(db.Integer,primary_key = True)
     username = db.Column(db.String(255),index = True, nullable=False)
-    name = db.Column(db.String(255),index = True)
     email = db.Column(db.String(255),unique = True,index = True, nullable=False)
     role_id = db.Column(db.Integer,db.ForeignKey('roles.id'))
     password_hash = db.Column(db.String(255))
@@ -22,10 +21,10 @@ class User(UserMixin,db.Model):
     profile_pic_path = db.Column(db.String())
     the_blog = db.relationship('Blog', backref='user', lazy='dynamic')
 
-    def __init__(username,name,email,password_hash):
+    def __init__(self,username,email,password_hash):
         self.username = username
-        self.name = name
-        self.email = email      
+        self.email = email  
+        self.password_hash= password_hash    
 
     def save_User(self):
         '''

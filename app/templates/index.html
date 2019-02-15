@@ -7,7 +7,6 @@
 
    <div class="container">
        <h1>IMPRESS ME</h1>
-       <P>Welcome!!!!!!</P>
            <h2 class="head">PITCH CATEGORIES</h2>
 
        <br>
@@ -19,6 +18,7 @@
            <br>
        </div>
        <div class="thumbnail blogs">
+
            <h3><b>Pitches About life</b></h3>
            <br>
            <br>
@@ -36,12 +36,75 @@
        </div>
    </div>
     <style>
-    body{
-        text-align: center;
-        background-image: url("https://jooinn.com/images/backgrounds-49.jpg")
-    }
-    </style>
-    </body>
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+body{
+    text-align: center;
+    background-image: url("static/mirror.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.head {
+    color: black;
+    font-family: 'Nunito', sans-serif !important;
+    font-size: 40px;
+    text-align: center;
+
+}
+
+.subscribe {
+    font-family: 'Nunito', sans-serif !important;
+}
+
+.blogs {
+    font-family: 'Nunito', sans-serif !important;
+    width: 620px;
+    color: black !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    font-size: 20px;
+    opacity: 0.7;
+    filter: alpha(opacity=50);
+}
+
+.blogs:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transform: translateY(-7px);
+}
+
+p {
+    font-size: 15px;
+}
+
+h3 {
+    text-decoration-line: underline;
+    
+}
+
+.view {
+    text-decoration-line: underline;
+    font-family: 'Nunito', sans-serif !important;
+}
+
+.thumbnail blogs {
+    text-align: center;
+    font-size: 20px;
+    opacity: 0.7;
+    filter: alpha(opacity=50);
+    color:  white; 
+}
+
+.color {
+    color: black !important;
+    font-family: 'Nunito', sans-serif !important;
+
+}
+</style>
                     
 </body>
 {% endblock %}
