@@ -1,6 +1,15 @@
 {% extends 'base.html'%}
 {% block content %}
+<body>
 <div class="container">
+        <div class="col-md-4">
+
+            {% if user.profile_pic_path %}
+            <img src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail">
+            {%else%}
+            <p>No profile picture</p>
+            {% endif %}
+        </div>    
     <div class="row">
         <div class="col-md-4">
             <h3> {{user.username| capitalize}} </h3>
@@ -10,14 +19,7 @@
             <p> {{user.username| capitalize}} has no bio </p>
             {% endif %}
         </div>
-        <div class="col-md-4">
 
-            {% if user.profile_pic_path %}
-            <img src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail">
-            {%else%}
-            <p>No profile picture</p>
-            {% endif %}
-        </div>
             {% if user == current_user %}
         <form action="{{url_for('main.update_pic',uname=user.username)}}" method="post" enctype="multipart/form-data">
             
@@ -31,4 +33,32 @@ border-style: solid; margin-left:500px">Add New Pitch</a><br>
             {% endif %}
         </div>
      </div>
+
+    
+</body>
+
+<style>
+    body{
+        text-align: center;
+        background-image: url("https://b.kisscc0.com/20180517/ajw/kisscc0-desktop-wallpaper-4k-resolution-high-definition-te-nature-5afd559f208de6.9913836915265519671334.jpg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    a{
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        font-size: 20px;
+        opacity: 0.7;
+        filter: alpha(opacity=50);
+        color: aliceblue;
+    }
+
+</style>
     {% endblock %}

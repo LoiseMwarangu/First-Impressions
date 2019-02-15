@@ -8,7 +8,7 @@
     <h1 style="text-align:center">Share your Pitch...</h1>
     <div class="row1">
         <h1>Media Pitch</h1>
-        <p>Always target the righ beat</p>
+        <p>Always target the right beat</p>
         <p>Posted on {{date}} by {{pitch.user.username| capitalize}}</p>
         <a href="/pitch/{{pitch.id}}?like=1" class="col btn btn-success">Like
         </a>{{pitch.likes}} <a href="/pitch/{{pitch.id}}?dislike=1">Dislike</a>
@@ -42,4 +42,14 @@
     </div>
     </div>
 </div>
+<style>
+    body{
+        text-align: center;
+        background-image: url("https://b.kisscc0.com/20180517/ajw/kisscc0-desktop-wallpaper-4k-resolution-high-definition-te-nature-5afd559f208de6.9913836915265519671334.jpg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    </style>
 {% endblock %}
