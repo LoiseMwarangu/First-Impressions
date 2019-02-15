@@ -1,0 +1,129 @@
+@import
+url("https://fonts.googleapis.com/css?family=Raleway:300,400,700,900");
+@import
+url("https://fonts.googleapis.com/css?family=Economica:300,400,700,900");
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+body{
+    text-align: center;
+    background-image: url("static/flower.jpeg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+
+}
+h1{
+    float: right;
+    color: white;
+}
+h2{
+    text-align: center;
+}
+.head {
+    color: gray;
+    font-family: 'Nunito', sans-serif !important;
+    font-size: 40px;
+    text-align: center;
+
+}
+.subscribe {
+    font-family: 'Nunito', sans-serif !important;
+}
+
+.blogs {
+    font-family: 'Nunito', sans-serif !important;
+    width: 620px;
+    color: black !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    font-size: 20px;
+    opacity: 0.7;
+    filter: alpha(opacity=50);
+}
+
+.blogs:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transform: translateY(-7px);
+}
+p {
+    font-size: 15px;
+}
+
+
+.view {
+    text-decoration-line: underline;
+    font-family: 'Nunito', sans-serif !important;
+}
+
+.thumbnail blogs {
+    text-align: center;
+    font-size: 20px;
+    opacity: 0.9;
+    filter: alpha(opacity=50);
+    color:  white; 
+
+}
+.heading{
+    text-align: center;
+    margin-top: 30px;
+}
+h1{
+    font-size: 60px;
+    color: white;
+    font-family:'Raleway',san-serif;
+}
+p{
+    font-size: 40px;
+    margin-top: 30px;
+    font-family:'Economica',san-serif;
+}
+body{
+    background-image: url("flower.jpeg");
+    background-size: cover;
+    opacity: 0.8;
+    color:white;
+    height: 100vh;
+}
+footer{
+    background-color: black;
+    color: blanchedalmond;
+    width: 100vw;
+    margin-top: 115px;
+    height: 60px;
+    text-align: center;
+
+}
+.button{
+display: inline-block;
+font-size: 18px;
+text-decoration:none;
+text-transform: uppercase;
+border-width: 2px;
+border-style: solid;
+padding: .5em 1.75em;
+margin-top: 200px;
+}
+.button-accent{
+color: white;
+border-color: white;
+}
+.button-accent:hover,
+.button-accent:focus{
+background:gray;
+color: white;
+}
+.row2{
+    float: right;
+    background-color: black;
+    opacity: 0.8;
+    border-radius: 25px;
+}
+.row1{
+    float: left;
+    background-color: black;
+    opacity: 0.8;
+    border-radius: 25px;
+}

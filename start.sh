@@ -1,5 +1,6 @@
-export MAIL_USERNAME="loisemwarangu@gmail.com"
-export MAIL_PASSWORD="32123772"
-export SECRET_KEY= "loise"
+export SECRET_KEY='Flask WTF Secret Key'
 
-python3.6 manage.py runserver
+export EMAIL_USERNAME='loisemwarangu@gmail.com'
+export EMAIL_PASSWORD='loise@9954'
+
+python3.6 manage.py server

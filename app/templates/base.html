@@ -1,19 +1,5 @@
-{% extends 'bootstrap/base.html' %}
-{% block navbar%}
-    {% include 'navbar.html' %}
+{% extends 'bootstrap/base.html'%}
+<!-- Navbar block  -->
+{% block navbar %}
+{% include 'navbar.html' %}
 {% endblock %}
-{% block styles %}
-    {{ super() }}
-    
-    {{simplemde.css}}
-    {{simplemde.js}}
-    {% endblock %}
-    
-   
-    
-    <link href="https://fonts.googleapis.com/css?family=Nunito|PT+Serif" rel="stylesheet">  
-<body>
-    <br>
-    
-
-</body>
