@@ -52,4 +52,14 @@
         background-position: center;
     }
     </style>
+    <footer>
+        <a href="{{url_for('main.pitch',category=sarcastic)}}"><h3><b>Sarcastic pitches</b></h3></a>
+
+        <a href="{{url_for('main.pitch',category=life)}}"> <h3><b>Pitches About life</b></h3></a>
+
+        <a href="{{url_for('main.pitch',category=motivation)}}"><h3><b>Motivational pitches</b></h3></a>
+
+        <a href="{{url_for('main.pitch',category=other)}}"><h3><b>Other Categories</b></h3></a>
+
+    </footer>
 {% endblock %}
