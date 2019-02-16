@@ -11,8 +11,8 @@ import datetime
 def index():
     title = 'Home - Welcome to Pitch App'
     return render_template('index.html')
-@main.route('/pitch/<int:id>', methods = ['GET','POST'])
-def pitch(id):
+@main.route('/pitch/', methods = ['GET','POST'])
+def pitch():
 
     title ="PITCH- Share your pitch..."
 
